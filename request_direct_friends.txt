@@ -1,0 +1,10 @@
+select 
+  u.* 
+from 
+  users u 
+  inner join friends f 
+    on u.user_id = f.friend_id 
+where 
+  f.user_id = ?
+
+? = $_GET["userid"]
